@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.text.Html;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -13,6 +14,9 @@ public class MainActivity extends AppCompatActivity {
     TextView typeEnterText;
     TextView dateEnterText;
     TextView linkText;
+    RadioButton vote1;
+    RadioButton vote2;
+    RadioButton vote3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,5 +36,14 @@ public class MainActivity extends AppCompatActivity {
 
         linkText = (TextView)findViewById(R.id.linkText);
         linkText.setText(Html.fromHtml("<a href=http://www.google.com>Показать описание и QR-код голосования</a>"));
+
+        vote1 = (RadioButton)findViewById(R.id.vote1);
+        vote1.setText("Устройстро световой стелы - 'Я люблю Солнечнодольск' в нижней части бульвара солнечный");
+
+        vote2 = (RadioButton)findViewById(R.id.vote2);
+        vote2.setText("Обустройство детской игровой площадки в средней части бульвара Солнечный");
+
+        vote3 = (RadioButton)findViewById(R.id.vote3);
+        vote3.setText("Обустройство зоны с фигурами 'Топиари'");
     }
 }

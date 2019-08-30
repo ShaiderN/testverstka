@@ -76,47 +76,49 @@
 
     <TextView
         android:id="@+id/linkText"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="17dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="32dp"
         android:autoLink="web"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="378dp"
+        android:layout_height="354dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <RadioGroup
-            android:layout_width="378dp"
-            android:layout_height="354dp">
+        <RadioButton
+            android:id="@+id/vote1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@android:color/transparent"
+            android:drawableStart="@drawable/random" />
 
-            <RadioButton
-                android:id="@+id/vote1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
+        <RadioButton
+            android:id="@+id/vote2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@android:color/transparent"
+            android:checked="false"
+            android:drawableStart="@drawable/random" />
 
-            <RadioButton
-                android:id="@+id/vote2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:checked="false" />
+        <RadioButton
+            android:id="@+id/vote3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@android:color/transparent"
+            android:checked="false"
+            android:drawableStart="@drawable/random" />
 
-            <RadioButton
-                android:id="@+id/vote3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:checked="false" />
-        </RadioGroup>
-    </LinearLayout>
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
