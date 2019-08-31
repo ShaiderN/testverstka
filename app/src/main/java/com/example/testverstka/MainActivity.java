@@ -73,13 +73,5 @@ public class MainActivity extends AppCompatActivity {
         percVote3 = (TextView)findViewById(R.id.percVote3);
         percVote3.setText("29.88%");
 
-      /*  vote1 = (RadioButton)findViewById(R.id.vote1);
-        vote1.setText("Устройстро световой стелы - 'Я люблю Солнечнодольск' в нижней части бульвара Солнечный");
-
-        vote2 = (RadioButton)findViewById(R.id.vote2);
-        vote2.setText("Обустройство детской игровой площадки в средней части бульвара Солнечный");
-
-        vote3 = (RadioButton)findViewById(R.id.vote3);
-        vote3.setText("Обустройство зоны с фигурами 'Топиари'"); */
     }
 }
