@@ -17,10 +17,16 @@ public class MainActivity extends AppCompatActivity {
     TextView typeEnterText;
     TextView dateEnterText;
     TextView linkText;
+    TextView descTextVote1;
+    TextView descTextVote2;
+    TextView descTextVote3;
+    TextView percVote1;
+    TextView percVote2;
+    TextView percVote3;
     Dialog dialog;
-    RadioButton vote1;
+   /* RadioButton vote1;
     RadioButton vote2;
-    RadioButton vote3;
+    RadioButton vote3; */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,13 +55,31 @@ public class MainActivity extends AppCompatActivity {
         dialog = new Dialog(MainActivity.this);
         dialog.setContentView(R.layout.dialog_layout);
 
-        vote1 = (RadioButton)findViewById(R.id.vote1);
+        descTextVote1 = (TextView)findViewById(R.id.descTextVote1);
+        descTextVote1.setText("Устройстро световой стелы - 'Я люблю Солнечнодольск' в нижней части бульвара Солнечный");
+
+        descTextVote2 = (TextView)findViewById(R.id.descTextVote2);
+        descTextVote2.setText("Обустройство детской игровой площадки в средней части бульвара Солнечный");
+
+        descTextVote3 = (TextView)findViewById(R.id.descTextVote3);
+        descTextVote3.setText("Обустройство зоны с фигурами 'Топиари'");
+
+        percVote1 = (TextView)findViewById(R.id.percVote1);
+        percVote1.setText("21.34%");
+
+        percVote2 = (TextView)findViewById(R.id.percVote2);
+        percVote2.setText("38.41%");
+
+        percVote3 = (TextView)findViewById(R.id.percVote3);
+        percVote3.setText("29.88%");
+
+      /*  vote1 = (RadioButton)findViewById(R.id.vote1);
         vote1.setText("Устройстро световой стелы - 'Я люблю Солнечнодольск' в нижней части бульвара Солнечный");
 
         vote2 = (RadioButton)findViewById(R.id.vote2);
         vote2.setText("Обустройство детской игровой площадки в средней части бульвара Солнечный");
 
         vote3 = (RadioButton)findViewById(R.id.vote3);
-        vote3.setText("Обустройство зоны с фигурами 'Топиари'");
+        vote3.setText("Обустройство зоны с фигурами 'Топиари'"); */
     }
 }

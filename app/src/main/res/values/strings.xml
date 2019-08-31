@@ -4,7 +4,10 @@
     <string name="type">Тип:</string>
     <string name="date">Время проведения:</string>
     <string name="testDLText">Показать описание и QR-код голосования</string>
-    <string name="QR"><u>Показать описание и QR-код голосования</u></string>
+    <string name="QR">Показать описание и QR-код голосования</string>
     <string name="backgroundDL">background</string>
     <string name="qrcodeDL">qrCode</string>
+    <string name="imgvote1">imgVote1</string>
+    <string name="imgvote2">imgVote2</string>
+    <string name="imgvote3">imgVote3</string>
 </resources>
