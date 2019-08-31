@@ -178,7 +178,7 @@
                 android:layout_marginBottom="10dp"
                 android:layout_weight="2.5"
                 android:contentDescription="@string/imgvote1"
-                app:srcCompat="@drawable/random" />
+                app:srcCompat="@drawable/ilove" />
 
             <TextView
                 android:id="@+id/descTextVote1"
@@ -219,7 +219,7 @@
                 android:layout_marginBottom="10dp"
                 android:layout_weight="2.5"
                 android:contentDescription="@string/imgvote2"
-                app:srcCompat="@drawable/random" />
+                app:srcCompat="@drawable/kids" />
 
             <TextView
                 android:id="@+id/descTextVote2"
@@ -260,7 +260,7 @@
                 android:layout_marginBottom="10dp"
                 android:layout_weight="2.5"
                 android:contentDescription="@string/imgvote3"
-                app:srcCompat="@drawable/random" />
+                app:srcCompat="@drawable/topi" />
 
             <TextView
                 android:id="@+id/descTextVote3"

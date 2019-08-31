@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
@@ -37,18 +38,18 @@
 
         <ImageView
             android:id="@+id/qrCode"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="121dp"
+            android:layout_height="114dp"
             android:layout_marginStart="5dp"
             android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
             android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:contentDescription="@string/qrcodeDL"
             app:layout_constraintBottom_toBottomOf="@+id/koryavaya_podlozhka"
             app:layout_constraintEnd_toEndOf="@+id/koryavaya_podlozhka"
             app:layout_constraintStart_toStartOf="@+id/koryavaya_podlozhka"
             app:layout_constraintTop_toTopOf="@+id/koryavaya_podlozhka"
-            app:srcCompat="@drawable/qr"
-            android:contentDescription="@string/qrcodeDL" />
+            app:srcCompat="@drawable/content_qr1" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
