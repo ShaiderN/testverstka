@@ -12,10 +12,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="17dp"
         android:gravity="center"
-        android:textSize="36sp"
+        android:textSize="26sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,8 +25,8 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintTop_toBottomOf="@+id/voteDescriptionText">
@@ -52,7 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -78,7 +79,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -104,7 +105,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -142,7 +143,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/QR"
                 android:textColor="@color/blueText"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
         </LinearLayout>
 
     </LinearLayout>
@@ -152,12 +153,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="15dp"
-        android:layout_marginBottom="20dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
@@ -165,30 +165,33 @@
             android:id="@+id/vote1Layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/radiobtn_podlozhka"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/rectangle_rounded_all"
+            android:layout_marginBottom="4dp"
             android:orientation="horizontal">
 
             <ImageView
                 android:id="@+id/imgVote1"
                 android:layout_width="match_parent"
-                android:layout_height="81dp"
+                android:layout_height="91dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
-                android:layout_weight="2.5"
+                android:layout_weight="1.5"
                 android:contentDescription="@string/imgvote1"
+                android:scaleType="fitCenter"
                 app:srcCompat="@drawable/ilove" />
 
             <TextView
                 android:id="@+id/descTextVote1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_weight="2"
-                android:gravity="center|start"
-                android:textSize="16sp" />
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:gravity="center|start|fill"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/percVote1"
@@ -197,39 +200,43 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
-                android:layout_weight="2.5"
+                android:layout_weight="1.75"
                 android:gravity="center"
-                android:textSize="24sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/vote2Layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/radiobtn_podlozhka"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/rectangle_rounded_all"
             android:orientation="horizontal">
 
             <ImageView
                 android:id="@+id/imgVote2"
                 android:layout_width="match_parent"
-                android:layout_height="81dp"
+                android:layout_height="91dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
-                android:layout_weight="2.5"
+                android:layout_weight="1.5"
                 android:contentDescription="@string/imgvote2"
+                android:scaleType="fitCenter"
                 app:srcCompat="@drawable/kids" />
 
             <TextView
                 android:id="@+id/descTextVote2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_weight="2"
-                android:gravity="center|start"
-                android:textSize="16sp" />
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:gravity="center|start|fill"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/percVote2"
@@ -238,27 +245,30 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
-                android:layout_weight="2.5"
+                android:layout_weight="1.75"
                 android:gravity="center"
-                android:textSize="24sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/vote3Layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/radiobtn_podlozhka"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/rectangle_rounded_all"
             android:orientation="horizontal">
 
             <ImageView
                 android:id="@+id/imgVote3"
                 android:layout_width="match_parent"
-                android:layout_height="81dp"
+                android:layout_height="91dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
-                android:layout_weight="2.5"
+                android:layout_weight="1.5"
                 android:contentDescription="@string/imgvote3"
                 app:srcCompat="@drawable/topi" />
 
@@ -266,11 +276,11 @@
                 android:id="@+id/descTextVote3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_weight="2"
-                android:gravity="center|start"
-                android:textSize="16sp" />
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:gravity="center|start|fill"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/percVote3"
@@ -279,9 +289,10 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
-                android:layout_weight="2.5"
+                android:layout_weight="1.75"
                 android:gravity="center"
-                android:textSize="24sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
     </LinearLayout>

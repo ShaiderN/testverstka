@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         voteDescriptionText = (TextView)findViewById(R.id.voteDescriptionText);
-        voteDescriptionText.setText("Благосутройство бульвара Солнечный");
+        voteDescriptionText.setText("Благосутройство\nбульвара Солнечный");
 
         initEnterText = (TextView)findViewById(R.id.initEnterText);
         initEnterText.setText("Сообщество");
