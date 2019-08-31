@@ -20,17 +20,36 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/closeDLButton"
+        <ImageView
+            android:id="@+id/koryavaya_podlozhka"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="15dp"
             android:layout_marginTop="15dp"
-            android:layout_marginEnd="10dp"
-            android:text="@string/closeDLButton"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/testDLTextView" />
+            app:layout_constraintTop_toBottomOf="@+id/testDLTextView"
+            app:srcCompat="@drawable/koryavaya_podlozhka"
+            android:contentDescription="@string/backgroundDL" />
+
+        <ImageView
+            android:id="@+id/qrCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/koryavaya_podlozhka"
+            app:layout_constraintEnd_toEndOf="@+id/koryavaya_podlozhka"
+            app:layout_constraintStart_toStartOf="@+id/koryavaya_podlozhka"
+            app:layout_constraintTop_toTopOf="@+id/koryavaya_podlozhka"
+            app:srcCompat="@drawable/qr"
+            android:contentDescription="@string/qrcodeDL" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </RelativeLayout>

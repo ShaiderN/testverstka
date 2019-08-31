@@ -4,6 +4,7 @@
     <string name="type">Тип:</string>
     <string name="date">Время проведения:</string>
     <string name="testDLText">Показать описание и QR-код голосования</string>
-    <string name="closeDLButton">ЗАКРЫТЬ</string>
     <string name="QR"><u>Показать описание и QR-код голосования</u></string>
+    <string name="backgroundDL">background</string>
+    <string name="qrcodeDL">qrCode</string>
 </resources>

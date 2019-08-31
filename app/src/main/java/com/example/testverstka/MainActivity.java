@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
     TextView dateEnterText;
     TextView linkText;
     Dialog dialog;
-    Button closeDLButton;
     RadioButton vote1;
     RadioButton vote2;
     RadioButton vote3;
@@ -49,13 +48,6 @@ public class MainActivity extends AppCompatActivity {
 
         dialog = new Dialog(MainActivity.this);
         dialog.setContentView(R.layout.dialog_layout);
-        closeDLButton = (Button)dialog.findViewById(R.id.closeDLButton);
-        closeDLButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.dismiss();
-            }
-        });
 
         vote1 = (RadioButton)findViewById(R.id.vote1);
         vote1.setText("Устройстро световой стелы - 'Я люблю Солнечнодольск' в нижней части бульвара Солнечный");
