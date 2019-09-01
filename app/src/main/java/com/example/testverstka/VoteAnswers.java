@@ -1,6 +1,13 @@
 package com.example.testverstka;
 
-public class VoteAnswers {
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+
+import android.os.Bundle;
+
+import com.example.testverstka.databinding.VoteActivityBinding;
+
+public class VoteAnswers extends AppCompatActivity {
 
     public String voteAns1;
     public String voteAns2;
@@ -8,6 +15,18 @@ public class VoteAnswers {
     public String voteAnsPerc1;
     public String voteAnsPerc2;
     public String voteAnsPerc3;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.vote_activity);
+        VoteAnswers voteAnswers = new VoteAnswers("Устройство световой стелы – " +
+                "«Я люблю Солнечнодольск» в нижней части бульвара Солнечный", "Обустройство " +
+                "детской игровой площадки в средней части бульвара Солнечный", "Обустройство зоны" +
+                " с фигурами «Топиари»", "21.34 %", "34.41 %", "29.88 %");
+        VoteActivityBinding voteBinding = DataBindingUtil.setContentView(this, R.layout.vote_activity);
+        voteBinding.setVoteAnswers(voteAnswers);
+    }
 
     public VoteAnswers(String voteAns1, String voteAns2, String voteAns3, String voteAnsPerc1, String voteAnsPerc2, String voteAnsPerc3) {
         this.voteAns1 = voteAns1;
@@ -65,5 +84,4 @@ public class VoteAnswers {
     public void setVoteAnsPerc3(String voteAnsPerc3) {
         this.voteAnsPerc3 = voteAnsPerc3;
     }
-
 }

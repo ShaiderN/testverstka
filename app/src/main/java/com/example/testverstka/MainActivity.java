@@ -40,17 +40,6 @@ public class MainActivity extends AppCompatActivity {
         dialog = new Dialog(MainActivity.this);
         dialog.setContentView(R.layout.dialog_layout);
 
-        intent = new Intent(MainActivity.this, VoteAnswers.class);
-
-        VoteAnswers voteAnswers = new VoteAnswers("Устройство световой стелы – " +
-                "«Я люблю Солнечнодольск» в нижней части бульвара Солнечный", "Обустройство " +
-                "детской игровой площадки в средней части бульвара Солнечный", "Обустройство зоны" +
-                " с фигурами «Топиари»", "21.34 %", "34.41 %", "29.88 %");
-        VoteActivityBinding voteBinding = DataBindingUtil.setContentView(this, R.layout.vote_activity);
-        voteBinding.setVoteAnswers(voteAnswers);
-
-
-
     /*    VoteQR voteQR = new VoteQR("В 2019 году в рамках регионального проекта " +
                 "«Повышение комфортности городской среды Ставропольского края» проводится " +
                 "благоустройство бульвара Солнечный. На бульваре будут оборудованы зоны для " +
