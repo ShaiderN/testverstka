@@ -1,48 +1,34 @@
 package com.example.testverstka;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
-import android.text.Html;
 import android.view.View;
-import android.widget.Button;
-import android.widget.RadioButton;
 import android.widget.TextView;
+
+import com.example.testverstka.databinding.ActivityMainBinding;
+import com.example.testverstka.databinding.DialogLayoutBinding;
+import com.example.testverstka.databinding.VoteActivityBinding;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView voteDescriptionText;
-    TextView initEnterText;
-    TextView typeEnterText;
-    TextView dateEnterText;
     TextView linkText;
-    TextView descTextVote1;
-    TextView descTextVote2;
-    TextView descTextVote3;
-    TextView percVote1;
-    TextView percVote2;
-    TextView percVote3;
     Dialog dialog;
-   /* RadioButton vote1;
-    RadioButton vote2;
-    RadioButton vote3; */
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        voteDescriptionText = (TextView)findViewById(R.id.voteDescriptionText);
-        voteDescriptionText.setText("Благосутройство\nбульвара Солнечный");
 
-        initEnterText = (TextView)findViewById(R.id.initEnterText);
-        initEnterText.setText("Сообщество");
-
-        typeEnterText = (TextView)findViewById(R.id.typeEnterText);
-        typeEnterText.setText("Открытое");
-
-        dateEnterText = (TextView)findViewById(R.id.dateEnterText);
-        dateEnterText.setText("05.07.2019 - 20.07.2019");
+        VoteMainDescription voteMainDescription =
+                new VoteMainDescription("Благоустройство бульвара Солнечный",
+                        "Сообщество", "Открытое", "05.07.2019 - 20.07.2019");
+        ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        binding.setVoteMainDescription(voteMainDescription);
 
         linkText = (TextView)findViewById(R.id.linkText);
         linkText.setOnClickListener(new View.OnClickListener() {
@@ -51,27 +37,30 @@ public class MainActivity extends AppCompatActivity {
                 dialog.show();
             }
         });
-
         dialog = new Dialog(MainActivity.this);
         dialog.setContentView(R.layout.dialog_layout);
 
-        descTextVote1 = (TextView)findViewById(R.id.descTextVote1);
-        descTextVote1.setText("Устройстро световой стелы - 'Я люблю Солнечнодольск' в нижней части бульвара Солнечный");
+        intent = new Intent(MainActivity.this, VoteAnswers.class);
 
-        descTextVote2 = (TextView)findViewById(R.id.descTextVote2);
-        descTextVote2.setText("Обустройство детской игровой площадки в средней части бульвара Солнечный");
+        VoteAnswers voteAnswers = new VoteAnswers("Устройство световой стелы – " +
+                "«Я люблю Солнечнодольск» в нижней части бульвара Солнечный", "Обустройство " +
+                "детской игровой площадки в средней части бульвара Солнечный", "Обустройство зоны" +
+                " с фигурами «Топиари»", "21.34 %", "34.41 %", "29.88 %");
+        VoteActivityBinding voteBinding = DataBindingUtil.setContentView(this, R.layout.vote_activity);
+        voteBinding.setVoteAnswers(voteAnswers);
 
-        descTextVote3 = (TextView)findViewById(R.id.descTextVote3);
-        descTextVote3.setText("Обустройство зоны с фигурами 'Топиари'");
 
-        percVote1 = (TextView)findViewById(R.id.percVote1);
-        percVote1.setText("21.34%");
 
-        percVote2 = (TextView)findViewById(R.id.percVote2);
-        percVote2.setText("38.41%");
-
-        percVote3 = (TextView)findViewById(R.id.percVote3);
-        percVote3.setText("29.88%");
+    /*    VoteQR voteQR = new VoteQR("В 2019 году в рамках регионального проекта " +
+                "«Повышение комфортности городской среды Ставропольского края» проводится " +
+                "благоустройство бульвара Солнечный. На бульваре будут оборудованы зоны для " +
+                "проведения праздников, для семейного и тихого отдыха, входная группа. \n" +
+                "Мы хотим, чтобы бульвар стал излюбленным местом отдыха для всех жителей. " +
+                "Как вам кажется, какой точки притяжения еще не хватает на бульваре? Это может " +
+                "быть детская площадка, фотозона, топиарные фигуры или световая стела. " +
+                "Ваше мнение очень важно.\n");
+        DialogLayoutBinding dlBinding = DataBindingUtil.setContentView( dialog.show(), R.layout.dialog_layout);
+        dlBinding.setVoteQR(voteQR); */
 
     }
 }
